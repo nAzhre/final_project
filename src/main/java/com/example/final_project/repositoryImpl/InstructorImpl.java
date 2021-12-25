@@ -14,7 +14,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
-@Transactional
 public class InstructorImpl implements InstructorRepository {
     @Inject
     EntityManager em;
@@ -23,7 +22,7 @@ public class InstructorImpl implements InstructorRepository {
     public List<InstructorAccount> findAll() {
         javax.persistence.EntityManager entityManager = em.manager();
         try {
-            Query query = entityManager.createQuery("SELECT a FROM InstructorAccount a");
+            Query query = entityManager.createQuery("SELECT i FROM InstructorAccount i");
             List<InstructorAccount> result = query.getResultList();
             return result;
         } catch (NoResultException e){
