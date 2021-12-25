@@ -18,7 +18,8 @@ public interface StudentRepository {
 
     StudentAccount changeNameById(int id, String firstName);
 
-    StudentAccount changeLastNameById(int id, String lastname);
+    StudentAccount changeLastNameById(int id, String lastName);
 
-    StudentAccount addNewStudent(int id, String name, String lastname, int age, double gpa);
+    StudentAccount addNewStudent(int id, String name, String lastname, String userName,String password, double gpa);
+
 }

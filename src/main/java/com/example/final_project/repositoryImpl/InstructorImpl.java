@@ -7,12 +7,14 @@ import com.example.final_project.repository.InstructorRepository;
 import javax.inject.Inject;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
+@Transactional
 public class InstructorImpl implements InstructorRepository {
     @Inject
     EntityManager em;

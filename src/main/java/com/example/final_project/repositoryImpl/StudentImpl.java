@@ -1,7 +1,6 @@
 package com.example.final_project.repositoryImpl;
 
 import com.example.final_project.EntityManager;
-import com.example.final_project.entity.InstructorAccount;
 import com.example.final_project.entity.StudentAccount;
 import com.example.final_project.repository.StudentRepository;
 
@@ -18,9 +17,9 @@ public class StudentImpl implements StudentRepository {
     public List<StudentAccount> findAll() {
         javax.persistence.EntityManager entityManager = em.manager();
         try {
-            Query query = entityManager.createQuery("SELECT a FROM StudentAccount a");
-            List<StudentAccount> result = query.getResultList();
-            return result;
+            Query query = entityManager.createQuery("SELECT s FROM StudentAccount s");
+            List<StudentAccount> result1 = query.getResultList();
+            return result1;
         } catch (NoResultException e){
             return null;
         }
@@ -60,12 +59,19 @@ public class StudentImpl implements StudentRepository {
     }
 
     @Override
-    public StudentAccount changeLastNameById(int id, String lastname) {
+    public StudentAccount changeLastNameById(int id, String lastName) {
         return null;
     }
 
     @Override
-    public StudentAccount addNewStudent(int id, String name, String lastname, int age, double gpa) {
-        return null;
+    public StudentAccount addNewStudent(int id, String firstName, String lastname, String userName,String password, double gpa) {
+        javax.persistence.EntityManager entityManager = em.manager();
+        try {
+            StudentAccount student = new StudentAccount(id, firstName, lastname,userName, password,gpa);
+            entityManager.persist(student);;
+            return student;
+        } catch (NoResultException e){
+            return null;
+        }
     }
 }

@@ -10,9 +10,7 @@ import java.time.LocalDate;
 
 @Entity
 @Data
-@Table(name = "instructor", indexes = {
-        @Index(name = "instructor_name_key", columnList = "name", unique = true)
-})
+@Table(name = "instructors")
 @NoArgsConstructor
 @AllArgsConstructor
 public class InstructorAccount{
