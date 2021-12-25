@@ -19,8 +19,6 @@ public class LoggingFilter implements ContainerRequestFilter {
 
         String data = "\n";
         data += "REQUEST_METHOD: " + requestContext.getMethod() + "\n";
-        data += "URI_INFO: " + requestContext.getUriInfo() + "\n";
-        data += "HEADERS: " + requestContext.getHeaders() + "\n";
         data += "MEDIA_TYPE: " + requestContext.getMediaType() + "\n";
         data += "ENTITY_STREAM: " + requestContext.getEntityStream();
         EhCache.setCache(data);

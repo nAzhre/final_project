@@ -21,19 +21,19 @@ public class InstructorAccount{
     private Integer id;
 
     @NotNull
-    @Column(name = "firstName")
+    @Column(name = "\"firstName\"")
     private String firstName;
 
     @NotNull
-    @Column(name = "lastName")
+    @Column(name = "\"lastName\"")
     private String lastName;
 
     @NotNull
-    @Column(name = "userName")
+    @Column(name = "\"userName\"")
     private String userName;
 
     @NotNull
-    @Column(name = "email")
+    @Column(name = "\"email\"")
     private String email;
 
 

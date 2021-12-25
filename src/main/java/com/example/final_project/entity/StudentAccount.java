@@ -20,23 +20,23 @@ public class StudentAccount {
     private Integer id;
 
     @NotNull
-    @Column(name = "firstName")
+    @Column(name = "\"firstName\"")
     private String firstName;
 
     @NotNull
-    @Column(name = "lastName")
+    @Column(name = "\"lastName\"")
     private String lastName;
 
     @NotNull
-    @Column(name = "userName")
+    @Column(name = "\"userName\"")
     private String userName;
 
     @NotNull
-    @Column(name = "password")
+    @Column(name = "\"password\"")
     private String password;
 
     @NotNull
-    @Column(name = "gpa")
+    @Column(name = "\"gpa\"")
     private double gpa;
 
 //    @NotNull
