@@ -55,7 +55,7 @@ public class InstructorController {
 
     }
     @GET
-    @Path("/studentByLastName/{lastName}")
+    @Path("/instructorByLastName/{lastName}")
     @Produces("application/json")
     public Response findByLastName(@PathParam("lastName") String lastName) throws SQLException, JsonProcessingException {
         ObjectMapper om = new ObjectMapper();
